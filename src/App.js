@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import { Link } from 'react-router-dom';
 import './App.css';
+import { Formulario } from './componentes/Formulario';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className='itens-Formulario'>
+        <h1> Faça login </h1>
+        <h2> E entre para o nosso time! </h2>
+        <Formulario></Formulario>
+        <Link className='recuperar-senha'
+        to="/recuperar-senha">
+          <span >Esqueceu a senha ?</span>
+        </Link>
+        <Link to="/cadastro">
+          <button  className='cadastro' >Criar conta</button>
+        </Link>
+      </div>
     </div>
   );
 }
